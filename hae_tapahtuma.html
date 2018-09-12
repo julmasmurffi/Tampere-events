@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWT Harkkatyö</title>
+  <link rel="stylesheet" href="css/ht_tyylit.css" media="screen">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div id="container" class="container">
+
+  <h1 class="page-header" id="otsikko">Tampereen tapahtumien tiedonhaku</h1>
+  <div id="valintaVaihtoehdot" class="row">
+    <form id ="kaavake">
+      <div class="col-md-4 col-sm-4 col-xs-6">
+        <label>Kategoria:</label>
+        <select class="form-control" id="kateg">
+          <option value="tyhja"></option>
+
+          <option value="exhibition">Näyttely</option>
+          <option value="festival">Festarit</option>
+          <option value="entertainment">Viihde</option>
+          <option value="market">Markkinat</option>
+          <option value="sports">Urheilu</option>
+          <option value="food">Ruoka</option>
+        </select>
+      </div>
+
+      <div class="col-md-4 col-sm-4 col-xs-6">
+        <label>Tapahtumien määrä:</label>
+        <input type="number" class="form-control" id="maara" value="" placeholder="0" min="0" max="10" />
+
+      </div>
+    </form>
+
+    <div class="col-md-4 col-sm-4 col-xs-6">
+
+    <label>&nbsp;</label>
+    <button class="btn btn-info form-control" id="nouda">Nouda tapahtumatiedot</button>
+      <hr>
+      <input class="btn btn-primary" id="nollaa" type="reset" value="Reset">
+    </div>
+
+
+    </div>
+
+    <hr>
+    <h2 id="sis">&nbsp; Tee haku, niin tapahtumat näkyvät kartalla.</h2>
+    <div id="kartta"></div>
+
+    <div id="sisalto">
+      <div id="tapahtumienlista"></div>
+    </div>
+
+</div>
+
+
+<footer> <!-- ============================================ FOOTER -->
+  <script type="text/javascript">
+    document.write("Sivua on muokattu viimeksi: " + document.lastModified);
+  </script>
+  <p></p>
+</footer>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyDl_twKChbDP_UhweWI8Km20Ir7nU964x4&callback=initMap"
+type="text/javascript"></script>
+<script type="text/javascript" src="js/toiminnallisuus.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</body>
+</html>

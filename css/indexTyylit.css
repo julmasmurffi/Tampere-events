@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  float:left;
+  margin-right: 2em;
+  margin-bottom: 2em;
+
+}
+
+#kartta{background:none; height:100%;width:100%;}
+#karttaContainer{overflow:hidden;height:50%;width:100%;}
